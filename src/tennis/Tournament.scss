@@ -1,0 +1,85 @@
+$root: "tournament";
+
+.#{$root} {
+    width: auto;
+    background: #FFF;
+    color: #2E384D;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    &__date {
+        font-size: 16px;
+        line-height: 19px;
+        padding-right: 20px;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        display: block;
+        margin-top: 8px;
+        padding-right: 20px;
+    }
+    &__place {
+        color: #8798AD;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: .4px;
+        display: block;
+        margin-top: 6px;
+        padding-right: 20px;
+    }
+    &__status {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-top: 8px;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: .4px;
+        &-label {
+            font-size: 16px;
+            line-height: 19px;
+            color: #B71C1C;
+        }
+    }
+    &__info {
+        max-width: 311px;
+        width: 100%;
+        padding: 10px;
+    }
+    &__player {
+        &s {
+            max-width: 464px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid #E6EEF2;
+            padding: 10px;
+            width: 100%;
+        }
+        &-rounds {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            line-height: 19px;
+        }
+        & + & {
+            margin-left: 40px;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: -4px;
+                height: 40px;
+                background: #E6EEF2;
+                transform: rotate(15deg);
+                left: -20px;
+                width: 1px;
+                transform-origin: center;
+            }
+        }
+    }
+}
